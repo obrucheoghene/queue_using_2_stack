@@ -4,9 +4,10 @@
 #include <stdio.h>
 
 int pop1();
-int push1(int x);
+void push1(int x);
 int pop2();
-int push2(int x);
-int enque(int x);
+void push2(int x);
+void enque(int x);
 int deque();
+int display();
 #endif
