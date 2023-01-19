@@ -1,8 +1,8 @@
 #include "queue.h"
 
-int s1[5];
-int s2[5];
-int n = 5;
+int s1[100];
+int s2[100];
+int n = 100;
 int top1 = -1;
 int top2 = -1;
 int count = 0;
@@ -14,34 +14,39 @@ int count = 0;
  */
 int main(void)
 {
-    enque(1);
-    enque(2);
-    enque(3);
-    enque(4);
-    enque(5);
+    enqueue(1);
+    enqueue(2);
+    enqueue(3);
+    enqueue(4);
+    enqueue(5);
     display();
 
-    deque();
-    deque();
+    dequeue();
+    dequeue();
+    dequeue();
+    dequeue();
+    dequeue();
     display();
+
+   
 }
 
 /**
- * enque - Add item to queue
+ * enqueue - Add item to queue
  *
  * Return: Nothing
  */
-void enque(int x)
+void enqueue(int x)
 {
     push1(x);
 }
 
 /**
- * deque - Remove item from queue
+ * dequeue - Remove item from queue
  *
  * Return: Value of item removed
  */
-int deque()
+int dequeue()
 {   
     int x;
     while (top1 != -1)
@@ -65,6 +70,12 @@ int deque()
 void display()
 {
     int i = 0;
+
+    if (top1 == -1)
+    {
+        printf("Queue is empty\n");
+        return;
+    }
 
     while (i <= top1)
     {
