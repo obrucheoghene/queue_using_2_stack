@@ -17,5 +17,9 @@
 - Spooling in printer
 - Buffer for devices like keyboard
 
-**Compile Source File**
-gcc main.c -o main
+**How to compile and run program**
+- gcc main.c -o main
+- ./main
+
+**Sample Output**
+![Sample Output](output.png)
