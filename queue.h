@@ -9,5 +9,5 @@ int pop2();
 void push2(int x);
 void enque(int x);
 int deque();
-int display();
+void display();
 #endif

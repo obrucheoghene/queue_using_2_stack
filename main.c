@@ -1,4 +1,4 @@
-#include "queue";
+#include "queue.h"
 
 int s1[5];
 int s2[5];
@@ -18,6 +18,11 @@ int main(void)
     enque(2);
     enque(3);
     enque(4);
+    enque(5);
+    display();
+
+    deque();
+    deque();
     display();
 }
 
@@ -41,7 +46,7 @@ int deque()
     int x;
     while (top1 != -1)
     {
-        push2(pop1())
+        push2(pop1());
     }
     x = pop2();
     while (top2 != -1)
@@ -57,13 +62,13 @@ int deque()
  *
  * Return: Nothing
  */
-void display(int x)
+void display()
 {
     int i = 0;
 
     while (i <= top1)
     {
-        printf("%d ", s1[i])
+        printf("%d ", s1[i]);
         i++;
     }
     printf("\n");
@@ -88,7 +93,7 @@ void push1(int x)
 {
     if (top1 == (n - 1))
     {
-        printf("Queue is full\n")
+        printf("Queue is full\n");
     }
     else
     {
@@ -116,7 +121,7 @@ void push2(int x)
 {
     if (top2 == (n - 1))
     {
-        printf("Queue is full\n")
+        printf("Queue is full\n");
     }
     else
     {
