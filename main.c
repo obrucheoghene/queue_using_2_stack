@@ -19,6 +19,7 @@ int main(void)
     enqueue(3);
     enqueue(4);
     enqueue(5);
+
     display();
 
     dequeue();
@@ -27,8 +28,10 @@ int main(void)
     dequeue();
     dequeue();
     display();
-
-   
+    dequeue();
+    enqueue(3);
+    enqueue(4);
+    display();
 }
 
 /**
@@ -38,6 +41,7 @@ int main(void)
  */
 void enqueue(int x)
 {
+    printf("Enqueue %d\n", x);
     push1(x);
 }
 
@@ -49,16 +53,22 @@ void enqueue(int x)
 int dequeue()
 {   
     int x;
-    while (top1 != -1)
+
+    if (top1 < 0)
+    {
+        printf("Queue is empty. There nothing to dequeue. \n");
+        return (-1);
+    }
+    while (top1 > -1)
     {
         push2(pop1());
     }
     x = pop2();
-    while (top2 != -1)
+    while (top2 > -1)
     {
         push1(pop2());
     }
-    
+    printf("Dequeue %d\n", x);
     return (x);
 }
 
@@ -76,7 +86,7 @@ void display()
         printf("Queue is empty\n");
         return;
     }
-
+    printf("Items is in Queue: ");
     while (i <= top1)
     {
         printf("%d ", s1[i]);
